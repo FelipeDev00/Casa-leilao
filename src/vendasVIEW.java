@@ -23,6 +23,23 @@ public class vendasVIEW extends JFrame {
         
         add(scrollPane, BorderLayout.CENTER); // Adiciona o JScrollPane ao frame
         
-        produtos.listarProdutosVendidos(); // Popula a tabela com os produtos vendidos
+        listarProdutosVendidos(); // Popula a tabela com os produtos vendidos
+    }
+    private void listarProdutosVendidos() {
+        // Busca os produtos vendidos
+        ArrayList<ProdutosDTO> listaVendidos = produtos.listarProdutosVendidos();
+
+        // Limpa a tabela antes de adicionar novos dados
+        modelo.setRowCount(0);
+
+        // Adiciona os dados à tabela
+        for (ProdutosDTO produto : listaVendidos) {
+            modelo.addRow(new Object[]{
+                produto.getId(),
+                produto.getNome(),
+                produto.getValor(),
+                produto.getStatus()
+            });
+        }
     }
 }
