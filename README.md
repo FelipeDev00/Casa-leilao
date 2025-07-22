@@ -1,4 +1,4 @@
-# Casa de Leilões 
+# Casa de Leilões (projeto de estudo)
 
 Este projeto se trata de um software de informações de produtos que mostra uma listagem dos produtos cadastrados, uma tela para cadastrar produtos e também vender os produtos selecionados pelo ID. 
 
